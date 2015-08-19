@@ -1,0 +1,14 @@
+AppBundle\Entity\Categoria:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nome:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

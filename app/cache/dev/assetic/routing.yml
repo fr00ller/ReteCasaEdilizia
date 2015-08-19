@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Volumes/Documenti/SVILUPPO/RETE_CASA_EDILIZIA/clone/ReteCasaEdilizia/app/config/routing_dev.yml

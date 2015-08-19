@@ -1,0 +1,61 @@
+AppBundle\Entity\Preventivi:
+    type: entity
+    table: preventivi
+    indexes:
+        ditta:
+            columns:
+                - id_ditta
+        utente:
+            columns:
+                - id_user
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        oggetto:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        descrizione:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        dataInserimento:
+            type: datetime
+            nullable: false
+            comment: ''
+            default: CURRENT_TIMESTAMP
+            column: data_inserimento
+        dataLavorazione:
+            type: date
+            nullable: false
+            comment: ''
+            column: data_lavorazione
+    manyToOne:
+        idUser:
+            targetEntity: Utenti
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_user:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idDitta:
+            targetEntity: Ditte
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_ditta:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
