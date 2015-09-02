@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: retecasa001
+    database_user: root
+    database_password: 'pinguino'
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 2c82fe0f33deadf9d98c854fcec989a464d4d1da

@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Ditte list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idutente</th>
+                <th>Idcategoria</th>
+                <th>Ragionesoc</th>
+                <th>Indirizzo</th>
+                <th>Cap</th>
+                <th>Citta</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Piva</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('ditte_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.idUtente }}</td>
+                <td>{{ entity.idCategoria }}</td>
+                <td>{{ entity.ragioneSoc }}</td>
+                <td>{{ entity.indirizzo }}</td>
+                <td>{{ entity.cap }}</td>
+                <td>{{ entity.citta }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.piva }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('ditte_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

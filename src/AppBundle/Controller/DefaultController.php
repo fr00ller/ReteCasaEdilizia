@@ -20,6 +20,27 @@ class DefaultController extends Controller
         ));
     }
 
+   /**
+     * @Route("/servizi", name="servizi")
+     */
+    public function showServiziAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/servizi.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+    }
+
+	 /**
+     * @Route("/admin")
+     */
+    public function adminAction()
+    {
+        return new Response('Pagina admin!');
+    }
+
+
+
       /**
      * @Route("/categoria", name="categoria")
      */

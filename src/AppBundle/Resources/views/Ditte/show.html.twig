@@ -1,0 +1,58 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Ditte</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Idutente</th>
+                <td>{{ entity.idUtente }}</td>
+            </tr>
+            <tr>
+                <th>Idcategoria</th>
+                <td>{{ entity.idCategoria }}</td>
+            </tr>
+            <tr>
+                <th>Ragionesoc</th>
+                <td>{{ entity.ragioneSoc }}</td>
+            </tr>
+            <tr>
+                <th>Indirizzo</th>
+                <td>{{ entity.indirizzo }}</td>
+            </tr>
+            <tr>
+                <th>Cap</th>
+                <td>{{ entity.cap }}</td>
+            </tr>
+            <tr>
+                <th>Citta</th>
+                <td>{{ entity.citta }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ entity.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Piva</th>
+                <td>{{ entity.piva }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ditte') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
